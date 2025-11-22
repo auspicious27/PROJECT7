@@ -1,0 +1,44 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+venv
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache
+
+# IDEs
+.vscode
+.idea
+*.swp
+*.swo
+
+# Documentation
+*.md
+docs/
+
+# Tests
+tests/
+
+# CI/CD
+Jenkinsfile
+.github/
+
+# Docker
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Terraform
+terraform/
