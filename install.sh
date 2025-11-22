@@ -54,12 +54,17 @@ pip3 --version
 echo ""
 echo "[3/8] Installing Java (Jenkins requirement)..."
 if command -v yum &> /dev/null; then
-    yum install -y java-11-openjdk java-11-openjdk-devel
+    # Try Java 17 first (Amazon Linux 2023), then fall back to Java 11
+    yum install -y java-17-amazon-corretto java-17-amazon-corretto-devel || \
+    yum install -y java-11-amazon-corretto java-11-amazon-corretto-devel || \
+    yum install -y java-11-openjdk java-11-openjdk-devel || true
 elif command -v dnf &> /dev/null; then
-    dnf install -y java-11-openjdk java-11-openjdk-devel
+    dnf install -y java-17-amazon-corretto java-17-amazon-corretto-devel || \
+    dnf install -y java-11-amazon-corretto java-11-amazon-corretto-devel || \
+    dnf install -y java-11-openjdk java-11-openjdk-devel || true
 fi
 
-java -version
+java -version 2>&1 || echo "Java installation may need manual intervention"
 
 # Install Docker
 echo ""
