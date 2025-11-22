@@ -41,9 +41,9 @@ fi
 echo ""
 echo "[2/8] Installing Python 3 and pip..."
 if command -v yum &> /dev/null; then
-    yum install -y python3 python3-pip python3-devel gcc git curl wget
+    yum install -y python3 python3-pip python3-devel gcc git wget || true
 elif command -v dnf &> /dev/null; then
-    dnf install -y python3 python3-pip python3-devel gcc git curl wget
+    dnf install -y python3 python3-pip python3-devel gcc git wget || true
 fi
 
 # Verify Python installation
