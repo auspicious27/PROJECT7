@@ -1,0 +1,131 @@
+╔════════════════════════════════════════════════════════╗
+║     FINAL COMPLETE SETUP - SAB KUCH AUTOMATIC          ║
+╚════════════════════════════════════════════════════════╝
+
+✅ INSTANCE: i-0791f06d83d486b74
+✅ IP: 3.235.197.99
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 COMPLETE SETUP SCRIPT RUN KARO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: AWS Console se Connect
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Browser: https://console.aws.amazon.com/ec2
+2. EC2 > Instances > i-0791f06d83d486b74
+3. Connect > EC2 Instance Connect > Connect
+4. Terminal open ho jayega
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 2: Complete Setup Script Run Karo
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Terminal mein yeh COMPLETE script copy-paste karo:
+
+cd /home/ec2-user && git clone https://github.com/JibbranAli/devops-project-7.git 2>/dev/null || (cd devops-project-7 && git pull) && cd devops-project-7 && cat > requirements.txt <<'REQEOF'
+flask==2.3.3
+scikit-learn==1.3.2
+numpy==1.24.3
+pandas==2.0.3
+streamlit==1.28.0
+prometheus-client==0.19.0
+requests==2.31.0
+pytest==7.4.3
+joblib==1.3.2
+REQEOF
+chmod +x *.sh && pip3 install --user --upgrade pip && pip3 install --user -r requirements.txt && sudo yum install -y docker && sudo systemctl start docker && sudo systemctl enable docker && sudo usermod -aG docker ec2-user && sudo curl -L "https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && sudo chmod +x /usr/local/bin/docker-compose && sudo ln -sf /usr/local/bin/docker-compose /usr/bin/docker-compose && sleep 5 && python3 app/train_model.py && sudo docker-compose down 2>/dev/null || true && sudo docker-compose build && sudo docker-compose up -d && sleep 20 && sudo docker-compose ps && PUBLIC_IP=$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) && echo "" && echo "╔════════════════════════════════════════════════════════╗" && echo "║           ✅ SETUP COMPLETE!                          ║" && echo "╚════════════════════════════════════════════════════════╝" && echo "" && echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo "📋 SERVICE URLs:" && echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo "" && echo "🌐 Streamlit Dashboard URL:" && echo "   http://$PUBLIC_IP:8501" && echo "" && echo "🔄 Jenkins Dashboard URL:" && echo "   http://$PUBLIC_IP:8080" && echo "" && echo "📊 Prometheus Monitoring URL:" && echo "   http://$PUBLIC_IP:9090" && echo "" && echo "🔌 Flask API URL:" && echo "   http://$PUBLIC_IP:5000" && echo "" && echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo "🔑 JENKINS PASSWORD:" && echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && sudo cat /var/lib/jenkins/secrets/initialAdminPassword && echo "" && echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo "🧪 NEXT STEPS:" && echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" && echo "" && echo "1. Jenkins URL open karo: http://$PUBLIC_IP:8080" && echo "2. Password enter karo (upar wala)" && echo "3. 'Install Suggested Plugins' click karo" && echo "4. Admin user create karo" && echo "5. Demo script run karo: ./run_demo.sh" && echo "6. Test script run karo: ./test_everything.sh" && echo ""
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 FINAL WORKING URLs (Script Complete Hone Ke Baad):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌐 Streamlit Dashboard URL:
+   http://3.235.197.99:8501
+
+🔄 Jenkins Dashboard URL:
+   http://3.235.197.99:8080
+
+📊 Prometheus Monitoring URL:
+   http://3.235.197.99:9090
+
+🔌 Flask API URL:
+   http://3.235.197.99:5000
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔑 JENKINS FIRST LOGIN:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Jenkins URL open karo: http://3.235.197.99:8080
+2. Script output mein initial admin password dikhega
+3. Password enter karo
+4. "Install Suggested Plugins" click karo
+5. Plugins install hone do
+6. Admin user create karo (username/password set karo)
+7. Jenkins dashboard dikhe to setup complete!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🧪 DEMO & TEST SCRIPTS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Services start hone ke baad, terminal mein:
+
+# Demo script run karo
+cd /home/ec2-user/devops-project-7
+./run_demo.sh
+
+# Test script run karo
+./test_everything.sh
+
+# Jenkins pipeline check karo
+# Jenkins dashboard > Jobs > mlops-pipeline
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ VERIFICATION CHECKLIST:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Streamlit Dashboard: http://3.235.197.99:8501
+   - UI load ho raha hai
+   - Sample input de ke prediction aa raha hai
+
+✅ Jenkins Dashboard: http://3.235.197.99:8080
+   - Login successful
+   - Dashboard accessible
+   - Pipeline visible
+
+✅ Prometheus: http://3.235.197.99:9090
+   - Metrics dashboard accessible
+   - Queries working
+
+✅ Flask API: http://3.235.197.99:5000
+   - Health check: curl http://3.235.197.99:5000/health
+   - Predictions working
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 EXPECTED SCRIPT OUTPUT:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Script run karne ke baad terminal mein dikhega:
+
+✅ Repository cloned
+✅ Requirements fixed
+✅ Dependencies installed
+✅ Docker installed
+✅ Models trained
+✅ Services started
+✅ Service status (all containers "Up")
+✅ Streamlit Dashboard URL
+✅ Jenkins Dashboard URL
+✅ Prometheus URL
+✅ Flask API URL
+✅ Jenkins Password
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+

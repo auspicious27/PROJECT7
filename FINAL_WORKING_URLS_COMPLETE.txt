@@ -1,0 +1,138 @@
+╔════════════════════════════════════════════════════════╗
+║     FINAL WORKING SERVICE URLs - COMPLETE GUIDE        ║
+╚════════════════════════════════════════════════════════╝
+
+✅ INSTANCE DETAILS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Instance ID: i-0791f06d83d486b74
+Public IP: 3.235.197.99
+Region: us-east-1
+Status: Running ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 FINAL WORKING SERVICE URLs:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. 🌐 Web UI (Streamlit):
+   http://3.235.197.99:8501
+   
+   Interactive interface for making ML predictions
+
+2. 🔌 API (Flask):
+   http://3.235.197.99:5000
+   
+   REST API endpoints:
+   - GET  /health    - Health check
+   - GET  /config    - Configuration
+   - GET  /metrics   - Prometheus metrics
+   - POST /predict   - Make predictions
+
+3. 📊 Prometheus (Monitoring):
+   http://3.235.197.99:9090
+   
+   Metrics and performance monitoring dashboard
+
+4. 🔄 Jenkins (CI/CD):
+   http://3.235.197.99:8080
+   
+   Continuous Integration and Deployment pipeline
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 SERVICES START KARNE KE LIYE:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 1: AWS Console se Connect
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Browser: https://console.aws.amazon.com/ec2
+2. EC2 > Instances
+3. Instance: i-0791f06d83d486b74 select karo
+4. "Connect" > "EC2 Instance Connect" > "Connect"
+5. Terminal open ho jayega
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 2: Complete Script Run Karo
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Terminal mein yeh COMPLETE script copy-paste karo:
+
+cd /home/ec2-user && git clone https://github.com/JibbranAli/devops-project-7.git 2>/dev/null || (cd devops-project-7 && git pull) && cd devops-project-7 && cat > requirements.txt <<'REQEOF'
+flask==2.3.3
+scikit-learn==1.3.2
+numpy==1.24.3
+pandas==2.0.3
+streamlit==1.28.0
+prometheus-client==0.19.0
+requests==2.31.0
+pytest==7.4.3
+joblib==1.3.2
+REQEOF
+pip3 install --user --upgrade pip && pip3 install --user -r requirements.txt && sudo yum install -y docker && sudo systemctl start docker && sudo systemctl enable docker && sudo usermod -aG docker ec2-user && sudo curl -L "https://github.com/docker/compose/releases/download/v2.23.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose && sudo chmod +x /usr/local/bin/docker-compose && sudo ln -sf /usr/local/bin/docker-compose /usr/bin/docker-compose && sleep 5 && python3 app/train_model.py && sudo docker-compose down 2>/dev/null || true && sudo docker-compose build && sudo docker-compose up -d && sleep 20 && sudo docker-compose ps && echo "==========================================" && echo "JENKINS PASSWORD:" && sudo cat /var/lib/jenkins/secrets/initialAdminPassword && echo "==========================================" && PUBLIC_IP=$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) && echo "" && echo "✅ ALL SERVICES STARTED!" && echo "" && echo "Service URLs:" && echo "  Web UI:     http://$PUBLIC_IP:8501" && echo "  API:        http://$PUBLIC_IP:5000" && echo "  Prometheus: http://$PUBLIC_IP:9090" && echo "  Jenkins:    http://$PUBLIC_IP:8080" && echo "" && echo "Test API:" && echo "  curl http://$PUBLIC_IP:5000/health"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STEP 3: Wait (5-10 minutes)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Script complete hone ke baad terminal mein dikhega:
+✅ Service Status
+✅ Jenkins Password  
+✅ All URLs
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔑 JENKINS PASSWORD:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Script run karne ke baad terminal mein automatically dikhega.
+Agar nahi dikha to:
+
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🧪 TEST COMMANDS:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+# Health Check
+curl http://3.235.197.99:5000/health
+
+# Make Prediction
+curl -X POST http://3.235.197.99:5000/predict \
+  -H "Content-Type: application/json" \
+  -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
+
+# Check Prometheus
+curl http://3.235.197.99:9090/-/healthy
+
+# Check Jenkins
+curl http://3.235.197.99:8080/login
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ SUMMARY:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Instance: i-0791f06d83d486b74
+IP: 3.235.197.99
+
+Final Working URLs:
+- Web UI:     http://3.235.197.99:8501
+- API:        http://3.235.197.99:5000
+- Prometheus: http://3.235.197.99:9090
+- Jenkins:    http://3.235.197.99:8080
+
+Steps:
+1. AWS Console se connect karo
+2. Script run karo
+3. Wait karo (5-10 min)
+4. URLs browser mein open karo
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Generated: $(date)
+

@@ -73,6 +73,29 @@ def select_model():
         return model_v2, "v2"
 
 
+@app.route('/', methods=['GET'])
+def root():
+    """Root endpoint with API information."""
+    return jsonify({
+        'message': 'MLOps Flask API',
+        'version': '1.0',
+        'status': 'running',
+        'endpoints': {
+            '/health': 'GET - Health check endpoint',
+            '/predict': 'POST - Make predictions (requires JSON body with "features" array)',
+            '/config': 'GET - Get A/B testing configuration',
+            '/metrics': 'GET - Prometheus metrics endpoint'
+        },
+        'example_predict': {
+            'url': '/predict',
+            'method': 'POST',
+            'body': {
+                'features': [5.1, 3.5, 1.4, 0.2]
+            }
+        }
+    })
+
+
 @app.route('/health', methods=['GET'])
 def health():
     """Health check endpoint."""

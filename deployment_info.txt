@@ -1,0 +1,42 @@
+╔════════════════════════════════════════════════════════╗
+║     AWS Deployment Information                         ║
+╚════════════════════════════════════════════════════════╝
+
+Instance ID: i-05063d805fe9d2423
+Public IP: 3.237.14.254
+Security Group: sg-016471d6ac76a7bc3
+Region: us-east-1
+AMI: ami-0156001f0548e90b1
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⏳ Deployment Status: In Progress
+   User data script is installing and deploying services.
+   This will take approximately 5-10 minutes.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌐 Service URLs (will be available after deployment):
+
+   Web UI (Streamlit):     http://3.237.14.254:8501
+   API (Flask):            http://3.237.14.254:5000
+   Prometheus (Monitoring): http://3.237.14.254:9090
+   Jenkins (CI/CD):        http://3.237.14.254:8080
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 Next Steps:
+
+1. Wait for deployment to complete (5-10 minutes)
+2. Check deployment status:
+   ssh -i your-key.pem ec2-user@3.237.14.254 "tail -f /var/log/user-data.log"
+
+3. Once deployment is complete, test the services:
+   curl http://3.237.14.254:5000/health
+
+4. Get Jenkins initial password:
+   ssh -i your-key.pem ec2-user@3.237.14.254 "sudo cat /var/lib/jenkins/secrets/initialAdminPassword"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Deployed: Sun Nov 23 01:45:54 IST 2025

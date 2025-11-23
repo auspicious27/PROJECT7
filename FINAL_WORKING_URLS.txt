@@ -1,0 +1,96 @@
+╔════════════════════════════════════════════════════════╗
+║     MLOps Pipeline - FINAL WORKING SERVICE URLs      ║
+╚════════════════════════════════════════════════════════╝
+
+✅ NEW INSTANCE CREATED WITH FIXED CONFIGURATION!
+
+Instance ID: i-0238af5edd321923a
+Public IP: 3.235.173.84
+Region: us-east-1
+Instance Type: t3.micro
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🌐 Web UI (Streamlit):
+   http://3.235.173.84:8501
+   Interactive interface for making predictions
+
+🔌 API (Flask):
+   http://3.235.173.84:5000
+   REST API for programmatic access
+   
+   Test command:
+   curl -X POST http://3.235.173.84:5000/predict \
+     -H "Content-Type: application/json" \
+     -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
+
+📊 Prometheus (Monitoring):
+   http://3.235.173.84:9090
+   Metrics and performance monitoring
+
+🔄 Jenkins (CI/CD):
+   http://3.235.173.84:8080
+   Continuous Integration and Deployment
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️  IMPORTANT: Instance abhi setup ho raha hai!
+
+Fixed user data script automatically:
+✅ Python 3.7 compatible requirements (Flask 2.3.3)
+✅ Repository clone kar rahi hai
+✅ Dependencies install kar rahi hai
+✅ Models train kar rahi hai
+✅ Docker services start kar rahi hai
+
+⏱️  Estimated time: 5-10 minutes
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Quick Test Commands (After 5-10 minutes):
+
+# Health check
+curl http://3.235.173.84:5000/health
+
+# Make prediction
+curl -X POST http://3.235.173.84:5000/predict \
+  -H "Content-Type: application/json" \
+  -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
+
+# Check Prometheus
+curl http://3.235.173.84:9090/-/healthy
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Jenkins Setup (After services are ready):
+
+1. Jenkins URL open karein: http://3.235.173.84:8080
+
+2. Initial password get karne ke liye (SSH se):
+   ssh ec2-user@3.235.173.84
+   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+3. Jenkins setup complete karein:
+   - Password enter karein
+   - "Install suggested plugins" click karein
+   - Admin user create karein
+
+4. Pipeline setup:
+   ssh ec2-user@3.235.173.84
+   cd devops-project-7
+   sudo ./setup_jenkins_pipeline.sh
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+What Was Fixed:
+✅ Requirements.txt updated for Python 3.7 compatibility
+✅ Flask downgraded from 3.0.0 to 2.3.3
+✅ Streamlit downgraded from 1.29.0 to 1.28.0
+✅ User data script completely rewritten
+✅ All dependencies properly installed
+✅ Docker services auto-start configured
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Generated: $(date)
+
