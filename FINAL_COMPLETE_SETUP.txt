@@ -2,8 +2,8 @@
 ║     FINAL COMPLETE SETUP - SAB KUCH AUTOMATIC          ║
 ╚════════════════════════════════════════════════════════╝
 
-✅ INSTANCE: i-0791f06d83d486b74
-✅ IP: 3.235.197.99
+✅ INSTANCE: YOUR_INSTANCE_ID
+✅ IP: YOUR_INSTANCE_IP
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -14,7 +14,7 @@ STEP 1: AWS Console se Connect
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 1. Browser: https://console.aws.amazon.com/ec2
-2. EC2 > Instances > i-0791f06d83d486b74
+2. EC2 > Instances > YOUR_INSTANCE_ID
 3. Connect > EC2 Instance Connect > Connect
 4. Terminal open ho jayega
 
@@ -44,23 +44,23 @@ chmod +x *.sh && pip3 install --user --upgrade pip && pip3 install --user -r req
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🌐 Streamlit Dashboard URL:
-   http://3.235.197.99:8501
+   http://YOUR_INSTANCE_IP:8501
 
 🔄 Jenkins Dashboard URL:
-   http://3.235.197.99:8080
+   http://YOUR_INSTANCE_IP:8080
 
 📊 Prometheus Monitoring URL:
-   http://3.235.197.99:9090
+   http://YOUR_INSTANCE_IP:9090
 
 🔌 Flask API URL:
-   http://3.235.197.99:5000
+   http://YOUR_INSTANCE_IP:5000
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🔑 JENKINS FIRST LOGIN:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. Jenkins URL open karo: http://3.235.197.99:8080
+1. Jenkins URL open karo: http://YOUR_INSTANCE_IP:8080
 2. Script output mein initial admin password dikhega
 3. Password enter karo
 4. "Install Suggested Plugins" click karo
@@ -90,21 +90,21 @@ cd /home/ec2-user/devops-project-7
 ✅ VERIFICATION CHECKLIST:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✅ Streamlit Dashboard: http://3.235.197.99:8501
+✅ Streamlit Dashboard: http://YOUR_INSTANCE_IP:8501
    - UI load ho raha hai
    - Sample input de ke prediction aa raha hai
 
-✅ Jenkins Dashboard: http://3.235.197.99:8080
+✅ Jenkins Dashboard: http://YOUR_INSTANCE_IP:8080
    - Login successful
    - Dashboard accessible
    - Pipeline visible
 
-✅ Prometheus: http://3.235.197.99:9090
+✅ Prometheus: http://YOUR_INSTANCE_IP:9090
    - Metrics dashboard accessible
    - Queries working
 
-✅ Flask API: http://3.235.197.99:5000
-   - Health check: curl http://3.235.197.99:5000/health
+✅ Flask API: http://YOUR_INSTANCE_IP:5000
+   - Health check: curl http://YOUR_INSTANCE_IP:5000/health
    - Predictions working
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━

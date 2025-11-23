@@ -2,8 +2,8 @@
 ║  MANUAL SERVICES START GUIDE - STEP BY STEP           ║
 ╚════════════════════════════════════════════════════════╝
 
-✅ Instance Running: i-0791f06d83d486b74
-✅ Public IP: 3.235.197.99
+✅ Instance Running: YOUR_INSTANCE_ID
+✅ Public IP: YOUR_INSTANCE_IP
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -12,7 +12,7 @@
 
 1. Browser mein jao: https://console.aws.amazon.com/ec2
 2. Left sidebar mein "Instances" click karo
-3. Instance select karo: i-0791f06d83d486b74
+3. Instance select karo: YOUR_INSTANCE_ID
 4. Top par "Connect" button click karo
 5. "EC2 Instance Connect" tab select karo
 6. "Connect" button click karo
@@ -130,7 +130,7 @@ sudo docker-compose logs flask-api
 sudo docker-compose logs streamlit-ui
 
 # Test API
-curl http://3.235.197.99:5000/health
+curl http://YOUR_INSTANCE_IP:5000/health
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -139,10 +139,10 @@ curl http://3.235.197.99:5000/health
 
 Services start hone ke baad, yeh URLs browser mein open karo:
 
-1. Web UI:     http://3.235.197.99:8501
-2. API:        http://3.235.197.99:5000
-3. Prometheus: http://3.235.197.99:9090
-4. Jenkins:    http://3.235.197.99:8080
+1. Web UI:     http://YOUR_INSTANCE_IP:8501
+2. API:        http://YOUR_INSTANCE_IP:5000
+3. Prometheus: http://YOUR_INSTANCE_IP:9090
+4. Jenkins:    http://YOUR_INSTANCE_IP:8080
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

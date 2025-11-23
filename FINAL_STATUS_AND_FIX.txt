@@ -5,8 +5,8 @@
 📊 CURRENT STATUS:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✅ Instance Running: i-0791f06d83d486b74
-✅ Public IP: 3.235.197.99
+✅ Instance Running: YOUR_INSTANCE_ID
+✅ Public IP: YOUR_INSTANCE_IP
 ❌ User Data Script: FAILED (Syntax Error)
 ❌ Services: NOT STARTED
 ❌ URLs: NOT WORKING YET
@@ -31,7 +31,7 @@ STEP 1: AWS Console se Connect
 
 1. Browser: https://console.aws.amazon.com/ec2
 2. EC2 > Instances
-3. Instance: i-0791f06d83d486b74 select karo
+3. Instance: YOUR_INSTANCE_ID select karo
 4. "Connect" > "EC2 Instance Connect" > "Connect"
 5. Terminal open ho jayega
 
@@ -72,10 +72,10 @@ STEP 4: Test URLs
 
 Browser mein yeh URLs open karo:
 
-1. http://3.235.197.99:8501 (Web UI)
-2. http://3.235.197.99:5000 (API)
-3. http://3.235.197.99:9090 (Prometheus)
-4. http://3.235.197.99:8080 (Jenkins)
+1. http://YOUR_INSTANCE_IP:8501 (Web UI)
+2. http://YOUR_INSTANCE_IP:5000 (API)
+3. http://YOUR_INSTANCE_IP:9090 (Prometheus)
+4. http://YOUR_INSTANCE_IP:8080 (Jenkins)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -142,7 +142,7 @@ Script complete hone ke baad:
 
 Services start hone ke baad, terminal mein yeh command run karo:
 
-curl http://3.235.197.99:5000/health
+curl http://YOUR_INSTANCE_IP:5000/health
 
 Agar "healthy" response aaye to sab sahi hai! ✅
 

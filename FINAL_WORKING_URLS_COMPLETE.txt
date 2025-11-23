@@ -5,8 +5,8 @@
 ✅ INSTANCE DETAILS:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Instance ID: i-0791f06d83d486b74
-Public IP: 3.235.197.99
+Instance ID: YOUR_INSTANCE_ID
+Public IP: YOUR_INSTANCE_IP
 Region: us-east-1
 Status: Running ✅
 
@@ -16,12 +16,12 @@ Status: Running ✅
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 1. 🌐 Web UI (Streamlit):
-   http://3.235.197.99:8501
+   http://YOUR_INSTANCE_IP:8501
    
    Interactive interface for making ML predictions
 
 2. 🔌 API (Flask):
-   http://3.235.197.99:5000
+   http://YOUR_INSTANCE_IP:5000
    
    REST API endpoints:
    - GET  /health    - Health check
@@ -30,12 +30,12 @@ Status: Running ✅
    - POST /predict   - Make predictions
 
 3. 📊 Prometheus (Monitoring):
-   http://3.235.197.99:9090
+   http://YOUR_INSTANCE_IP:9090
    
    Metrics and performance monitoring dashboard
 
 4. 🔄 Jenkins (CI/CD):
-   http://3.235.197.99:8080
+   http://YOUR_INSTANCE_IP:8080
    
    Continuous Integration and Deployment pipeline
 
@@ -49,7 +49,7 @@ STEP 1: AWS Console se Connect
 
 1. Browser: https://console.aws.amazon.com/ec2
 2. EC2 > Instances
-3. Instance: i-0791f06d83d486b74 select karo
+3. Instance: YOUR_INSTANCE_ID select karo
 4. "Connect" > "EC2 Instance Connect" > "Connect"
 5. Terminal open ho jayega
 
@@ -99,32 +99,32 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 # Health Check
-curl http://3.235.197.99:5000/health
+curl http://YOUR_INSTANCE_IP:5000/health
 
 # Make Prediction
-curl -X POST http://3.235.197.99:5000/predict \
+curl -X POST http://YOUR_INSTANCE_IP:5000/predict \
   -H "Content-Type: application/json" \
   -d '{"features": [5.1, 3.5, 1.4, 0.2]}'
 
 # Check Prometheus
-curl http://3.235.197.99:9090/-/healthy
+curl http://YOUR_INSTANCE_IP:9090/-/healthy
 
 # Check Jenkins
-curl http://3.235.197.99:8080/login
+curl http://YOUR_INSTANCE_IP:8080/login
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ✅ SUMMARY:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Instance: i-0791f06d83d486b74
-IP: 3.235.197.99
+Instance: YOUR_INSTANCE_ID
+IP: YOUR_INSTANCE_IP
 
 Final Working URLs:
-- Web UI:     http://3.235.197.99:8501
-- API:        http://3.235.197.99:5000
-- Prometheus: http://3.235.197.99:9090
-- Jenkins:    http://3.235.197.99:8080
+- Web UI:     http://YOUR_INSTANCE_IP:8501
+- API:        http://YOUR_INSTANCE_IP:5000
+- Prometheus: http://YOUR_INSTANCE_IP:9090
+- Jenkins:    http://YOUR_INSTANCE_IP:8080
 
 Steps:
 1. AWS Console se connect karo

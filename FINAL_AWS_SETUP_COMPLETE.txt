@@ -2,8 +2,8 @@
 ║     FINAL AWS SETUP - SAB KUCH RUN KARO               ║
 ╚════════════════════════════════════════════════════════╝
 
-✅ INSTANCE: i-0791f06d83d486b74
-✅ IP: 3.235.197.99
+✅ INSTANCE: YOUR_INSTANCE_ID
+✅ IP: YOUR_INSTANCE_IP
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -33,23 +33,23 @@ chmod +x *.sh && pip3 install --user --upgrade pip && pip3 install --user -r req
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🌐 Streamlit Dashboard URL:
-   http://3.235.197.99:8501
+   http://YOUR_INSTANCE_IP:8501
 
 🔄 Jenkins Dashboard URL:
-   http://3.235.197.99:8080
+   http://YOUR_INSTANCE_IP:8080
 
 📊 Prometheus Monitoring URL:
-   http://3.235.197.99:9090
+   http://YOUR_INSTANCE_IP:9090
 
 🔌 Flask API URL:
-   http://3.235.197.99:5000
+   http://YOUR_INSTANCE_IP:5000
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🔑 JENKINS FIRST LOGIN:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. Jenkins URL: http://3.235.197.99:8080
+1. Jenkins URL: http://YOUR_INSTANCE_IP:8080
 2. Script output se password copy karo
 3. "Install Suggested Plugins" click karo
 4. Admin user create karo
@@ -83,7 +83,7 @@ sudo ./setup_jenkins_pipeline.sh
 ✅ JENKINS PIPELINE CHECK:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. Jenkins Dashboard: http://3.235.197.99:8080
+1. Jenkins Dashboard: http://YOUR_INSTANCE_IP:8080
 2. Jobs/Pipelines list mein "mlops-pipeline" dekhna chahiye
 3. Build run hua, stages green hain kya check karo
 4. Logs mein koi error to nahi verify karo
@@ -112,7 +112,7 @@ Output dekh ke confirm karo ki sab tests pass ho rahe hain.
 🌐 STREAMLIT DASHBOARD VERIFY:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. Streamlit URL open karo: http://3.235.197.99:8501
+1. Streamlit URL open karo: http://YOUR_INSTANCE_IP:8501
 2. UI load ho raha hai kya check karo
 3. Sample input de ke model prediction aa raha hai kya verify karo
 4. Sliders use karke different predictions test karo
@@ -122,7 +122,7 @@ Output dekh ke confirm karo ki sab tests pass ho rahe hain.
 📊 PROMETHEUS MONITORING:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-1. Prometheus URL: http://3.235.197.99:9090
+1. Prometheus URL: http://YOUR_INSTANCE_IP:9090
 2. Queries try karo:
    - prediction_requests_total
    - model_version_requests_total
@@ -134,23 +134,23 @@ Output dekh ke confirm karo ki sab tests pass ho rahe hain.
 🎯 COMPLETE VERIFICATION CHECKLIST:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✅ Streamlit Dashboard: http://3.235.197.99:8501
+✅ Streamlit Dashboard: http://YOUR_INSTANCE_IP:8501
    - UI load ho raha hai
    - Sample input de ke prediction aa raha hai
 
-✅ Jenkins Dashboard: http://3.235.197.99:8080
+✅ Jenkins Dashboard: http://YOUR_INSTANCE_IP:8080
    - Login successful
    - Pipeline visible (mlops-pipeline)
    - Build run hua
    - Stages green hain
    - Logs mein no errors
 
-✅ Prometheus: http://3.235.197.99:9090
+✅ Prometheus: http://YOUR_INSTANCE_IP:9090
    - Metrics dashboard accessible
    - Queries working
 
-✅ Flask API: http://3.235.197.99:5000
-   - Health check: curl http://3.235.197.99:5000/health
+✅ Flask API: http://YOUR_INSTANCE_IP:5000
+   - Health check: curl http://YOUR_INSTANCE_IP:5000/health
    - Predictions working
 
 ✅ Test Scripts:

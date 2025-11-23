@@ -5,8 +5,8 @@
 ✅ INSTANCE STATUS: RUNNING
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Instance ID: i-0791f06d83d486b74
-Public IP: 3.235.197.99
+Instance ID: YOUR_INSTANCE_ID
+Public IP: YOUR_INSTANCE_IP
 Region: us-east-1
 Status: ✅ Running
 
@@ -16,12 +16,12 @@ Status: ✅ Running
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 1. 🌐 Web UI (Streamlit):
-   http://3.235.197.99:8501
+   http://YOUR_INSTANCE_IP:8501
    
    Interactive ML prediction interface
 
 2. 🔌 API (Flask):
-   http://3.235.197.99:5000
+   http://YOUR_INSTANCE_IP:5000
    
    REST API for predictions:
    - GET  /health    - Health check
@@ -29,12 +29,12 @@ Status: ✅ Running
    - GET  /metrics   - Prometheus metrics
 
 3. 📊 Prometheus (Monitoring):
-   http://3.235.197.99:9090
+   http://YOUR_INSTANCE_IP:9090
    
    Metrics and monitoring dashboard
 
 4. 🔄 Jenkins (CI/CD):
-   http://3.235.197.99:8080
+   http://YOUR_INSTANCE_IP:8080
    
    Continuous Integration pipeline
 
@@ -46,7 +46,7 @@ Status: ✅ Running
 AWS Console se Connect karke yeh script run karo:
 
 1. https://console.aws.amazon.com/ec2
-2. EC2 > Instances > i-0791f06d83d486b74
+2. EC2 > Instances > YOUR_INSTANCE_ID
 3. Connect > EC2 Instance Connect > Connect
 4. Terminal mein yeh script paste karo:
 
@@ -75,7 +75,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 🧪 QUICK TEST:
 
-curl http://3.235.197.99:5000/health
+curl http://YOUR_INSTANCE_IP:5000/health
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

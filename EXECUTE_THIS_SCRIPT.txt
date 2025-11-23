@@ -2,8 +2,8 @@
 ║     EXECUTE THIS SCRIPT - SAB KUCH RUN HOGA            ║
 ╚════════════════════════════════════════════════════════╝
 
-✅ INSTANCE: i-0791f06d83d486b74
-✅ IP: 3.235.197.99
+✅ INSTANCE: YOUR_INSTANCE_ID
+✅ IP: YOUR_INSTANCE_IP
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -11,7 +11,7 @@
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 1. Browser: https://console.aws.amazon.com/ec2
-2. EC2 > Instances > i-0791f06d83d486b74
+2. EC2 > Instances > YOUR_INSTANCE_ID
 3. Connect > EC2 Instance Connect > Connect
 4. Terminal open ho jayega
 
@@ -41,16 +41,16 @@ chmod +x *.sh && pip3 install --user --upgrade pip && pip3 install --user -r req
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 🌐 Streamlit Dashboard URL:
-   http://3.235.197.99:8501
+   http://YOUR_INSTANCE_IP:8501
 
 🔄 Jenkins Dashboard URL:
-   http://3.235.197.99:8080
+   http://YOUR_INSTANCE_IP:8080
 
 📊 Prometheus Monitoring URL:
-   http://3.235.197.99:9090
+   http://YOUR_INSTANCE_IP:9090
 
 🔌 Flask API URL:
-   http://3.235.197.99:5000
+   http://YOUR_INSTANCE_IP:5000
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -95,17 +95,17 @@ cd /home/ec2-user/devops-project-7
 ./test_everything.sh
 
 # API test
-curl http://3.235.197.99:5000/health
+curl http://YOUR_INSTANCE_IP:5000/health
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ✅ VERIFICATION:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-✅ Streamlit: http://3.235.197.99:8501 - UI load, predictions work
-✅ Jenkins: http://3.235.197.99:8080 - Login, pipeline visible
-✅ Prometheus: http://3.235.197.99:9090 - Metrics dashboard
-✅ API: http://3.235.197.99:5000 - Health check, predictions
+✅ Streamlit: http://YOUR_INSTANCE_IP:8501 - UI load, predictions work
+✅ Jenkins: http://YOUR_INSTANCE_IP:8080 - Login, pipeline visible
+✅ Prometheus: http://YOUR_INSTANCE_IP:9090 - Metrics dashboard
+✅ API: http://YOUR_INSTANCE_IP:5000 - Health check, predictions
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

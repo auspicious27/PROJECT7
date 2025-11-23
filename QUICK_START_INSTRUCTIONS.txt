@@ -2,8 +2,8 @@
 ║  QUICK START - SERVICES START KARNE KE LIYE           ║
 ╚════════════════════════════════════════════════════════╝
 
-✅ INSTANCE: i-0791f06d83d486b74
-✅ IP: 3.235.197.99
+✅ INSTANCE: YOUR_INSTANCE_ID
+✅ IP: YOUR_INSTANCE_IP
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -12,7 +12,7 @@
 
 1. Browser: https://console.aws.amazon.com/ec2
 2. EC2 > Instances
-3. Instance: i-0791f06d83d486b74 select karo
+3. Instance: YOUR_INSTANCE_ID select karo
 4. "Connect" button click karo
 5. "EC2 Instance Connect" tab select karo
 6. "Connect" button click karo
@@ -58,16 +58,16 @@ Script run hone ke baad:
 Script complete hone ke baad, yeh URLs browser mein open karo:
 
 🌐 Web UI (Streamlit):
-   http://3.235.197.99:8501
+   http://YOUR_INSTANCE_IP:8501
 
 🔌 API (Flask):
-   http://3.235.197.99:5000
+   http://YOUR_INSTANCE_IP:5000
 
 📊 Prometheus (Monitoring):
-   http://3.235.197.99:9090
+   http://YOUR_INSTANCE_IP:9090
 
 🔄 Jenkins (CI/CD):
-   http://3.235.197.99:8080
+   http://YOUR_INSTANCE_IP:8080
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -95,7 +95,7 @@ Script complete hone ke baad terminal mein dikhega:
 
 Services start hone ke baad, terminal mein yeh command run karo:
 
-curl http://3.235.197.99:5000/health
+curl http://YOUR_INSTANCE_IP:5000/health
 
 Agar "healthy" response aaye to sab sahi hai! ✅
 
